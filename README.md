@@ -1,10 +1,23 @@
-# @connorbritain/mssql-mcp-writer
+# MSSQL MCP Writer
 
-Model Context Protocol server for SQL Server with **read and data operations** - no DDL/schema changes included.
+[![npm version](https://img.shields.io/npm/v/@connorbritain/mssql-mcp-writer.svg)](https://www.npmjs.com/package/@connorbritain/mssql-mcp-writer)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This is the middle tier of the [mssql-mcp-server](https://github.com/ConnorBritain/mssql-mcp-server) family. Use this package when you need both reading and data manipulation but want to prevent schema changes.
+**Model Context Protocol server for Microsoft SQL Server with read and data operations.**
 
-## Tools Included (17 tools)
+Full data manipulation capabilities (INSERT, UPDATE, DELETE) with preview/confirm safeguards, but no DDL operations. Ideal for data engineers and ETL workflows where you need to modify data but want to prevent schema changes.
+
+## Package Tiers
+
+| Package | npm | Tools | Use Case |
+|---------|-----|-------|----------|
+| **[mssql-mcp-reader](https://github.com/ConnorBritain/mssql-mcp-reader)** | `@connorbritain/mssql-mcp-reader` | 14 read-only | Analysts, auditors, safe exploration |
+| **mssql-mcp-writer** (this) | `@connorbritain/mssql-mcp-writer` | 17 (reader + data ops) | Data engineers, ETL developers |
+| **[mssql-mcp-server](https://github.com/ConnorBritain/mssql-mcp-server)** | `@connorbritain/mssql-mcp-server` | 20 (all tools) | DBAs, full admin access |
+
+---
+
+## Tools Included
 
 | Category | Tools |
 |----------|-------|
@@ -15,22 +28,19 @@ This is the middle tier of the [mssql-mcp-server](https://github.com/ConnorBrita
 | **Scripts** | `list_scripts`, `run_script` |
 | **Operations** | `test_connection`, `validate_environment_config` |
 
-## What's NOT included
+**Not included:** `create_table`, `create_index`, `drop_table` (DDL operations)
 
-- `create_table`, `create_index`, `drop_table` - schema/DDL changes
+---
 
-For DDL operations, use [@connorbritain/mssql-mcp-server](https://github.com/ConnorBritain/mssql-mcp-server).
-For read-only access, use [@connorbritain/mssql-mcp-reader](https://github.com/ConnorBritain/mssql-mcp-reader).
+## Quick Start
 
-## Install
+### Install
 
 ```bash
 npm install -g @connorbritain/mssql-mcp-writer@latest
-# or run directly
-npx @connorbritain/mssql-mcp-writer@latest
 ```
 
-## MCP Client Config
+### MCP Client Configuration
 
 ```json
 {
@@ -50,28 +60,50 @@ npx @connorbritain/mssql-mcp-writer@latest
 }
 ```
 
+---
+
 ## Configuration
 
 | Variable | Required | Notes |
 |----------|----------|-------|
 | `SERVER_NAME` | Yes | SQL Server hostname/IP |
-| `DATABASE_NAME` | Yes | Database to target |
+| `DATABASE_NAME` | Yes | Target database |
 | `SQL_AUTH_MODE` | | `sql`, `windows`, or `aad` (default: `aad`) |
 | `SQL_USERNAME` / `SQL_PASSWORD` | | Required for `sql`/`windows` modes |
-| `READONLY` | | `true` disables write tools (makes it behave like reader) |
+| `READONLY` | | `true` disables write tools |
 | `ENVIRONMENTS_CONFIG_PATH` | | Path to multi-environment JSON config |
 | `SCRIPTS_PATH` | | Path to named SQL scripts directory |
+| `AUDIT_LOG_PATH` | | Custom audit log path |
 
-## Package Tiers
+---
 
-| Package | Tools | Use Case |
-|---------|-------|----------|
-| [mssql-mcp-reader](https://github.com/ConnorBritain/mssql-mcp-reader) | Read-only (14 tools) | Analysts, auditors, safe exploration |
-| **mssql-mcp-writer** (this) | Reader + data ops (17 tools) | Data engineers, ETL developers |
-| [mssql-mcp-server](https://github.com/ConnorBritain/mssql-mcp-server) | All tools (20 tools) | DBAs, full admin access |
+## Features
+
+All packages in the MSSQL MCP family share:
+
+- **Multi-environment support** - Named database environments (prod, staging, dev) with per-environment policies
+- **Governance controls** - `allowedTools`, `deniedTools`, `allowedSchemas`, `deniedSchemas`, `requireApproval`
+- **Audit logging** - JSON Lines logs with session IDs and auto-redaction
+- **Secret management** - `${secret:NAME}` placeholders for secure credential handling
+- **Named SQL scripts** - Pre-approved parameterized queries with governance controls
+- **Preview/confirm for mutations** - `update_data` and `delete_data` show affected rows before execution
+
+---
 
 ## Documentation
 
-**Full documentation:** [mssql-mcp-server README](https://github.com/ConnorBritain/mssql-mcp-server#readme)
+Full documentation, configuration examples, and governance details are available in the main repository:
 
+**[MSSQL MCP Server Documentation](https://github.com/ConnorBritain/mssql-mcp-server#readme)**
+
+---
+
+## License
+
+MIT License. See [LICENSE](./LICENSE) for details.
+
+---
+
+**Repository:** https://github.com/ConnorBritain/mssql-mcp-writer
 **Issues:** https://github.com/ConnorBritain/mssql-mcp-writer/issues
+**npm:** https://www.npmjs.com/package/@connorbritain/mssql-mcp-writer
